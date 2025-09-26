@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Intune at the center. Powered by Nerdio + Recast.(Single Page)</title>
+  <title>Nerdio + Recast — Intune-Governed Workspace (Working Demo)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { theme: { extend: {} } };
@@ -12,60 +12,93 @@
 </head>
 <body class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 antialiased selection:bg-cyan-300/30 selection:text-white">
   <main class="w-full flex items-center justify-center py-8">
-    <section class="w-[92vw] max-w-[1280px] bg-slate-900/60 backdrop-blur rounded-2xl shadow-2xl ring-1 ring-slate-800">
-      <!-- PAGE HEADER (no tabs anywhere) -->
-      <header class="p-6 pb-4">
+    <section class="w-[92vw] max-w-[1200px] bg-slate-900/60 backdrop-blur rounded-2xl shadow-2xl ring-1 ring-slate-800">
+      <!-- Header -->
+      <header class="p-6 pb-3">
         <h1 class="text-2xl font-extrabold tracking-tight">Nerdio + Recast</h1>
+        <p class="text-slate-300 text-base">One Intune-governed workspace. Day one.</p>
+
+        <!-- Partner badges -->
+        <div class="mt-4 flex flex-wrap items-center gap-2 text-[13px]">
+          <span class="inline-flex items-center gap-1 rounded-full px-2 py-1 bg-blue-900/50 ring-1 ring-blue-700">
+            <i data-lucide="shield" class="w-3.5 h-3.5 text-blue-300"></i>Intune — Control Plane
+          </span>
+          <span class="inline-flex items-center gap-1 rounded-full px-2 py-1 bg-emerald-900/40 ring-1 ring-emerald-600">
+            <i data-lucide="monitor" class="w-3.5 h-3.5 text-emerald-300"></i>Nerdio — Desktop Automation
+          </span>
+          <span class="inline-flex items-center gap-1 rounded-full px-2 py-1 bg-amber-900/30 ring-1 ring-amber-500">
+            <i data-lucide="package" class="w-3.5 h-3.5 text-amber-300"></i>Recast — Application Management
+          </span>
+        </div>
       </header>
 
-      <!-- CONSOLIDATED OVERVIEW (modeled after your preferred layout) -->
-      <section aria-label="Overview" class="px-6 pb-6 space-y-5">
-        <!-- Partner badges for quick context (not interactive) -->
-        <div class="flex flex-wrap items-center gap-2 text-[13px]">
-          <span class="inline-flex items-center gap-1 rounded-full px-2 py-1 bg-blue-900/50 ring-1 ring-blue-700"><i data-lucide="shield" class="w-3.5 h-3.5 text-blue-300"></i>Intune — Control Plane</span>
-          <span class="inline-flex items-center gap-1 rounded-full px-2 py-1 bg-emerald-900/40 ring-1 ring-emerald-600"><i data-lucide="monitor" class="w-3.5 h-3.5 text-emerald-300"></i>Nerdio — Desktop Automation</span>
-          <span class="inline-flex items-center gap-1 rounded-full px-2 py-1 bg-amber-900/30 ring-1 ring-amber-500"><i data-lucide="package" class="w-3.5 h-3.5 text-amber-300"></i>Recast — Application Management</span>
-        </div>
-
-        <!-- Four pains -->
+      <!-- Consolidated overview -->
+      <section class="px-6 pb-6 space-y-5">
         <div class="grid md:grid-cols-4 gap-3">
           <article class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-800 p-4">
-            <div class="flex items-center gap-2 mb-2"><i data-lucide="git-merge" class="w-4 h-4 text-sky-300"></i><h3 class="font-semibold">Fragmented Delivery</h3></div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="git-merge" class="w-4 h-4 text-sky-300"></i>
+              <h3 class="font-semibold">Fragmented Delivery</h3>
+            </div>
             <p class="text-sm text-slate-300">Desktops in one system, apps in another; policy drift grows.</p>
           </article>
           <article class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-800 p-4">
-            <div class="flex items-center gap-2 mb-2"><i data-lucide="box" class="w-4 h-4 text-amber-300"></i><h3 class="font-semibold">Packaging Backlog</h3></div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="box" class="w-4 h-4 text-amber-300"></i>
+              <h3 class="font-semibold">Packaging Backlog</h3>
+            </div>
             <p class="text-sm text-slate-300">Teams burn 5–10 hrs per app repeating work; migrations stall.</p>
           </article>
           <article class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-800 p-4">
-            <div class="flex items-center gap-2 mb-2"><i data-lucide="alert-octagon" class="w-4 h-4 text-rose-300"></i><h3 class="font-semibold">Zero-day Exposure</h3></div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="alert-octagon" class="w-4 h-4 text-rose-300"></i>
+              <h3 class="font-semibold">Zero-day Exposure</h3>
+            </div>
             <p class="text-sm text-slate-300">Third-party apps + OS unpatched = risk window measured in days.</p>
           </article>
           <article class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-800 p-4">
-            <div class="flex items-center gap-2 mb-2"><i data-lucide="gauge" class="w-4 h-4 text-violet-300"></i><h3 class="font-semibold">Azure Overspend</h3></div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="gauge" class="w-4 h-4 text-violet-300"></i>
+              <h3 class="font-semibold">Azure Overspend</h3>
+            </div>
             <p class="text-sm text-slate-300">Idle host pools & static capacity push spend up to 55% higher.</p>
           </article>
         </div>
-        <!-- Why buckets -->
+
+        <div class="text-[13px] text-slate-400">
+          Too many apps, too many versions — IT can’t keep up. Desktops and apps drift apart; security and cost suffer.
+        </div>
+
         <div class="grid md:grid-cols-3 gap-3">
           <section class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-800 p-4">
-            <div class="flex items-center gap-2 mb-2"><i data-lucide="help-circle" class="w-4 h-4 text-slate-200"></i><h3 class="font-semibold">Why Change</h3></div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-slate-200"></i>
+              <h3 class="font-semibold">Why Change</h3>
+            </div>
             <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-300">
               <li>Apps are the bottleneck — packaging/patching slow projects.</li>
               <li>Infra sprawl & idle capacity drive Azure overspend.</li>
               <li>Innovation waits until desktops + apps are governed together.</li>
             </ol>
           </section>
+
           <section class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-800 p-4">
-            <div class="flex items-center gap-2 mb-2"><i data-lucide="timer" class="w-4 h-4 text-sky-300"></i><h3 class="font-semibold">Why Now</h3></div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="timer" class="w-4 h-4 text-sky-300"></i>
+              <h3 class="font-semibold">Why Now</h3>
+            </div>
             <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-300">
               <li>Faster release cycles demand automation over manual work.</li>
               <li>Zero-day & compliance pressure make patch deadlines non-negotiable.</li>
               <li>Do more with less — automation is the lever left.</li>
             </ol>
           </section>
+
           <section class="rounded-2xl bg-slate-900/70 ring-1 ring-slate-800 p-4">
-            <div class="flex items-center gap-2 mb-2"><i data-lucide="layers" class="w-4 h-4 text-indigo-300"></i><h3 class="font-semibold">Why Better Together</h3></div>
+            <div class="flex items-center gap-2 mb-2">
+              <i data-lucide="layers" class="w-4 h-4 text-indigo-300"></i>
+              <h3 class="font-semibold">Why Better Together</h3>
+            </div>
             <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-300">
               <li>Complete the workspace — infra + apps in one Intune-governed flow.</li>
               <li>Measurable impact — autoscale savings + packaging time avoided.</li>
@@ -75,23 +108,20 @@
         </div>
       </section>
 
-      <!-- DEMO (unchained from tabs; Start/Reset only) -->
-      <section aria-label="Demo" class="p-6 pt-2 space-y-4">
-        <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <div class="space-y-0.5">
-          </div>
-          <div class="flex items-center gap-2">
-            <button id="btn-start" class="inline-flex items-center gap-2 rounded-xl px-3.5 py-2 font-semibold tracking-wide text-white bg-gradient-to-r from-indigo-500 to-emerald-400 shadow ring-1 ring-white/10 hover:brightness-110 active:translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">
-              <i data-lucide="play" class="w-4 h-4"></i><span>Start</span>
-            </button>
-            <button id="btn-reset" class="inline-flex items-center gap-2 rounded-xl px-3.5 py-2 font-semibold tracking-wide text-slate-100 bg-slate-800/70 hover:bg-slate-800 active:translate-y-px ring-1 ring-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
-              <i data-lucide="rotate-ccw" class="w-4 h-4"></i><span>Reset</span>
-            </button>
-          </div>
-        </div>
+      <!-- Controls row aligned to the right -->
+      <div class="px-6 pb-2 flex items-center justify-end gap-2">
+        <button id="btn-start" class="inline-flex items-center gap-2 rounded-xl px-3.5 py-2 font-semibold tracking-wide text-white bg-gradient-to-r from-indigo-500 to-emerald-400 shadow ring-1 ring-white/10 hover:brightness-110 active:translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">
+          <i data-lucide="play" class="w-4 h-4"></i><span>Start</span>
+        </button>
+        <button id="btn-reset" class="inline-flex items-center gap-2 rounded-xl px-3.5 py-2 font-semibold tracking-wide text-slate-100 bg-slate-800/70 hover:bg-slate-800 active:translate-y-px ring-1 ring-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i><span>Reset</span>
+        </button>
+      </div>
 
-        <div id="stage" class="relative overflow-hidden rounded-2xl p-4 md:p-6 min-h-[620px] bg-gradient-to-b from-slate-900 to-slate-950 ring-1 ring-slate-800" aria-live="polite">
-          <!-- Intune -->
+      <!-- Demo Panel -->
+      <section aria-label="Demo" class="p-6 pt-0">
+        <div id="stage" class="relative overflow-hidden rounded-2xl p-5 md:p-6 min-h-[560px] bg-gradient-to-b from-slate-900 to-slate-950 ring-1 ring-slate-800" aria-live="polite">
+          <!-- Intune control plane -->
           <div id="intune-bar" class="mx-auto max-w-xl rounded-xl bg-blue-950/60 ring-2 ring-blue-600 shadow-xl px-4 py-3 text-center">
             <div class="inline-flex items-center gap-2">
               <i data-lucide="shield-check" class="w-4 h-4 text-blue-300"></i>
@@ -100,14 +130,13 @@
             <div class="text-sm font-semibold mt-1">One workspace, governed by Intune.</div>
           </div>
 
-          <!-- Two columns -->
           <div class="grid md:grid-cols-2 gap-6 mt-6">
-            <!-- Nerdio -->
-            <section id="col-nerdio" class="rounded-2xl ring-1 ring-emerald-600/40 bg-emerald-950/30 p-4">
+            <!-- Nerdio Column -->
+            <section id="col-nerdio" class="rounded-2xl ring-1 ring-emerald-600/40 bg-emerald-950/25 p-4">
               <header class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
                   <i data-lucide="monitor" class="w-5 h-5 text-emerald-300"></i>
-                  <h3 class="font-bold text-emerald-200">Nerdio — Desktop Orchestration</h3>
+                  <h3 class="font-bold text-emerald-100">Nerdio — Desktop Orchestration</h3>
                 </div>
                 <span class="text-xs text-emerald-200/90 ring-1 ring-emerald-600 rounded-full px-2 py-0.5">Right-sized Desktops</span>
               </header>
@@ -126,12 +155,12 @@
                 </div>
                 <div class="flex items-center justify-between">
                   <span class="text-xs text-emerald-200/90">Benefit</span>
-                  <span id="metric-savings" class="text-xs font-semibold rounded-full bg-emerald-900/40 ring-1 ring-emerald-600 px-2 py-0.5 opacity-80">Up to 55% Azure savings</span>
+                  <span class="text-xs font-semibold rounded-full bg-emerald-900/40 ring-1 ring-emerald-600 px-2 py-0.5 opacity-90">Up to 55% Azure savings</span>
                 </div>
               </div>
             </section>
 
-            <!-- Recast -->
+            <!-- Recast Column -->
             <section id="col-recast" class="rounded-2xl ring-1 ring-amber-600/40 bg-amber-950/20 p-4">
               <header class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
@@ -141,17 +170,21 @@
                 <span class="text-xs text-amber-200/90 ring-1 ring-amber-500 rounded-full px-2 py-0.5">Apps Delivered &amp; Patched</span>
               </header>
               <div class="mt-4 grid gap-3">
+                <!-- Catalog (simple placeholders that "light up") -->
                 <div class="rounded-xl bg-slate-900/60 ring-1 ring-slate-800 p-3">
                   <div class="text-xs text-slate-300 mb-2">Catalog &amp; Status</div>
-                  <div id="app-icons" class="flex flex-wrap gap-1.5"></div>
+                  <div id="app-pills" class="flex flex-wrap gap-1.5"></div>
                 </div>
+
+                <!-- Rings -->
                 <div class="rounded-xl bg-slate-900/60 ring-1 ring-slate-800 p-3">
                   <div class="text-xs text-slate-300 mb-2">Rings &amp; Policy via Intune</div>
                   <div id="recast-rings" class="grid grid-cols-3 gap-2"></div>
                 </div>
+
                 <div class="flex items-center justify-between">
                   <span class="text-xs text-amber-200/90">Benefit</span>
-                  <span id="metric-compliance" class="text-xs font-semibold rounded-full bg-amber-900/40 ring-1 ring-amber-500 px-2 py-0.5 opacity-80">&gt;95% compliance</span>
+                  <span class="text-xs font-semibold rounded-full bg-amber-900/40 ring-1 ring-amber-500 px-2 py-0.5 opacity-90">&gt;95% compliance</span>
                 </div>
               </div>
             </section>
@@ -164,19 +197,29 @@
           </div>
           <p id="step-caption" class="mt-3 text-center text-sm text-slate-300">Ready to start</p>
 
-          <!-- Energy overlay -->
-          <svg class="pointer-events-none absolute inset-0" viewBox="0 0 1280 700" aria-hidden="true">
+          <!-- Energy paths -->
+          <svg class="pointer-events-none absolute inset-0" viewBox="0 0 1200 660" aria-hidden="true">
             <defs>
-              <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#93c5fd"></path></marker>
-              <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6ee7b7"></path></marker>
-              <marker id="arrowYellow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fde68a"></path></marker>
+              <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 z" fill="#93c5fd"></path>
+              </marker>
+              <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 z" fill="#6ee7b7"></path>
+              </marker>
+              <marker id="arrowYellow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 z" fill="#fde68a"></path>
+              </marker>
             </defs>
-            <path id="beam-intune" d="M640,130 L640,310" fill="none" stroke="#93c5fd" stroke-width="10" stroke-linecap="round" opacity="0"></path>
-            <path id="path-n2w" d="M260,390 C 460,430 560,430 640,400" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#arrowGreen)" opacity="0.25"></path>
+            <!-- Intune beam -->
+            <path id="beam-intune" d="M600,120 L600,280" fill="none" stroke="#93c5fd" stroke-width="10" stroke-linecap="round" opacity="0"></path>
+            <!-- Flows to outcome -->
+            <path id="path-n2w" d="M240,380 C 440,420 520,420 600,395" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#arrowGreen)" opacity="0.25"></path>
             <circle id="energy-n" r="5" fill="#6ee7b7" opacity="0"></circle>
-            <path id="path-r2w" d="M1020,390 C 820,430 720,430 640,400" fill="none" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowYellow)" opacity="0.25"></path>
+
+            <path id="path-r2w" d="M960,380 C 760,420 680,420 600,395" fill="none" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowYellow)" opacity="0.25"></path>
             <circle id="energy-r" r="5" fill="#fde68a" opacity="0"></circle>
-            <path id="path-i2w" d="M640,160 C 640,220 640,260 640,300" fill="none" stroke="#93c5fd" stroke-width="3" marker-end="url(#arrowBlue)" opacity="0.25"></path>
+
+            <path id="path-i2w" d="M600,160 C 600,220 600,255 600,300" fill="none" stroke="#93c5fd" stroke-width="3" marker-end="url(#arrowBlue)" opacity="0.25"></path>
             <circle id="energy-i" r="5" fill="#93c5fd" opacity="0"></circle>
           </svg>
         </div>
@@ -186,7 +229,12 @@
 
   <script>
     // ---------- STATE ----------
-    const STATE = { reduced: window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches, playing: false, timers: [], raf: null };
+    const STATE = {
+      reduced: window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      playing: false,
+      timers: [],
+      raf: null
+    };
 
     // ---------- ELEMENTS ----------
     const btnStart = document.getElementById('btn-start');
@@ -200,8 +248,9 @@
     const neridioCloud = document.getElementById('nerdio-cloudpc');
     const neridioAvd = document.getElementById('nerdio-avd');
     const neridioPolicy = document.getElementById('nerdio-policy');
+
     const recastRings = document.getElementById('recast-rings');
-    const appIcons = document.getElementById('app-icons');
+    const appPills = document.getElementById('app-pills');
 
     const paths = {
       beam: document.getElementById('beam-intune'),
@@ -222,7 +271,7 @@
     function moveAlongPath(circle, path, p){ const len=path.getTotalLength(); const pt=path.getPointAtLength(p*len); circle.setAttribute('cx', pt.x); circle.setAttribute('cy', pt.y); }
     function dot(active=false){ const d=document.createElement('span'); d.className='w-2 h-2 rounded-full ' + (active?'bg-emerald-300':'bg-slate-700'); return d; }
 
-    // Build static cells
+    // Build static rows (subtle blocks)
     for (let i=0;i<16;i++){ const c=document.createElement('div'); c.className='h-5 rounded-md bg-slate-800'; neridioCloud.appendChild(c); }
     for (let i=0;i<16;i++){ const c=document.createElement('div'); c.className='h-5 rounded-md bg-slate-800'; neridioAvd.appendChild(c); }
     for (let i=0;i<24;i++) neridioPolicy.appendChild(dot(false));
@@ -240,127 +289,146 @@
     }
     initRings();
 
-    const CATALOG = ['M365','Teams','Edge','Chrome','Zoom','Slack','SAP','Adobe','Box','Okta'];
+    const CATALOG = ['M365','Teams','Edge','Chrome','Zoom','Slack','SAP','Adobe'];
     let PILLS = [];
     function buildPills(){
-      while(appIcons.firstChild) appIcons.removeChild(appIcons.firstChild);
+      while(appPills.firstChild) appPills.removeChild(appPills.firstChild);
       PILLS = CATALOG.map(name=>{
         const pill=document.createElement('span');
-        pill.className='flex items-center gap-1 text-[10px] md:text-xs rounded-md px-2 py-1 ring-1 ring-slate-700 bg-slate-950/60';
-        const icon=document.createElement('i'); icon.setAttribute('data-lucide','circle-dot'); icon.className='w-3.5 h-3.5';
-        const label=document.createElement('span'); label.textContent=name;
-        const badge=document.createElement('span'); badge.className='ml-1 rounded-full px-1.5 py-0.5 text-[10px] ring-1 ring-slate-700 bg-slate-900/70'; badge.textContent='Queued';
-        pill.appendChild(icon); pill.appendChild(label); pill.appendChild(badge);
-        appIcons.appendChild(pill); return pill;
+        pill.className='text-[10px] md:text-xs rounded-md px-2 py-1 ring-1 ring-slate-700 bg-slate-950/60 text-slate-200';
+        pill.textContent=name + '  • Queued';
+        appPills.appendChild(pill);
+        return pill;
       });
-      try { window.lucide && window.lucide.createIcons && window.lucide.createIcons(); } catch(_) {}
-    }
-    function setPillPhase(pill, phase){
-      const badge=pill.lastChild, icon=pill.firstChild;
-      if(phase==='provisioning'){
-        pill.style.background='linear-gradient(90deg, rgba(251,191,36,0.15), rgba(56,189,248,0.10))';
-        pill.classList.remove('ring-slate-700'); pill.classList.add('ring-amber-400');
-        badge.textContent='Provisioning'; badge.className='ml-1 rounded-full px-1.5 py-0.5 text-[10px] ring-1 ring-amber-400/60 bg-amber-900/40';
-        icon.setAttribute('data-lucide','download');
-      }else if(phase==='patched'){
-        pill.style.background='linear-gradient(90deg, rgba(16,185,129,0.22), rgba(59,130,246,0.12))';
-        pill.classList.remove('ring-amber-400'); pill.classList.add('ring-emerald-400');
-        badge.textContent='Patched'; badge.className='ml-1 rounded-full px-1.5 py-0.5 text-[10px] ring-1 ring-emerald-400/60 bg-emerald-900/40';
-        icon.setAttribute('data-lucide','shield-check');
-      }else if(phase==='updated'){
-        pill.style.background='linear-gradient(90deg, rgba(56,189,248,0.22), rgba(147,197,253,0.18))';
-        pill.classList.remove('ring-emerald-400'); pill.classList.add('ring-sky-400');
-        badge.textContent='Updated'; badge.className='ml-1 rounded-full px-1.5 py-0.5 text-[10px] ring-1 ring-sky-400/60 bg-sky-900/40';
-        icon.setAttribute('data-lucide','refresh-ccw');
-      }else{
-        pill.style.background=''; pill.className='flex items-center gap-1 text-[10px] md:text-xs rounded-md px-2 py-1 ring-1 ring-slate-700 bg-slate-950/60';
-        badge.textContent='Queued'; badge.className='ml-1 rounded-full px-1.5 py-0.5 text-[10px] ring-1 ring-slate-700 bg-slate-900/70';
-        icon.setAttribute('data-lucide','circle-dot');
-      }
-      try { window.lucide && window.lucide.createIcons && window.lucide.createIcons(); } catch(_) {}
     }
     buildPills();
+
+    function colorPill(pill, phase){
+      if(phase==='provisioning'){
+        pill.textContent=pill.textContent.replace('Queued','Provisioning');
+        pill.className='text-[10px] md:text-xs rounded-md px-2 py-1 ring-1 ring-amber-400/60 bg-amber-900/40 text-amber-100';
+      }else if(phase==='patched'){
+        pill.textContent=pill.textContent.replace('Provisioning','Patched');
+        pill.className='text-[10px] md:text-xs rounded-md px-2 py-1 ring-1 ring-emerald-400/60 bg-emerald-900/40 text-emerald-100';
+      }else if(phase==='updated'){
+        pill.textContent=pill.textContent.replace('Patched','Updated');
+        pill.className='text-[10px] md:text-xs rounded-md px-2 py-1 ring-1 ring-sky-400/60 bg-sky-900/40 text-sky-100';
+      }else{
+        pill.textContent=pill.textContent.replace(/(Provisioning|Patched|Updated)/,'Queued');
+        pill.className='text-[10px] md:text-xs rounded-md px-2 py-1 ring-1 ring-slate-700 bg-slate-950/60 text-slate-200';
+      }
+    }
 
     function resetDemo(){
       btnStart.querySelector('span').textContent='Start';
       btnStart.setAttribute('aria-pressed','false');
       clearTimers(); stopRAF();
+
       caption.textContent='Ready to start';
       intuneBar.classList.remove('ring-4','ring-offset-2','ring-offset-slate-900','animate-pulse');
       colN.classList.remove('ring-2','ring-emerald-400','shadow-emerald-500/20');
       colR.classList.remove('ring-2','ring-amber-400','shadow-amber-500/20');
       outcome.style.boxShadow=''; outcome.style.transform='scale(1)';
-      setOpacity(paths.beam,0); setOpacity(energy.i,0); setOpacity(energy.n,0); setOpacity(energy.r,0);
+
+      setOpacity(paths.beam,0);
+      setOpacity(energy.i,0); setOpacity(energy.n,0); setOpacity(energy.r,0);
+
       Array.from(neridioCloud.children).forEach(c=> c.style.background='rgb(30 41 59)');
       Array.from(neridioAvd.children).forEach(c=> c.style.background='rgb(30 41 59)');
       Array.from(neridioPolicy.children).forEach(d=> d.className='w-2 h-2 rounded-full bg-slate-700');
-      initRings(); buildPills();
+
+      initRings();
+      buildPills();
     }
 
     // Steps
     function step1(){
-      caption.textContent='Step 1 — Intune Foundation';
-      intuneBar.classList.add('animate-pulse','ring-4','ring-offset-2','ring-offset-slate-900'); setOpacity(paths.beam,0.85);
+      caption.textContent='Step 1 — Intune Foundation (Governance).';
+      intuneBar.classList.add('animate-pulse','ring-4','ring-offset-2','ring-offset-slate-900');
+      setOpacity(paths.beam,0.9);
       if(STATE.reduced) return;
       const start=performance.now(), dur=900;
       const tick=(t)=>{ const p=Math.min(1,(t-start)/dur); setOpacity(energy.i,1); moveAlongPath(energy.i,paths.i2w,p); if(p<1) STATE.raf=requestAnimationFrame(tick); };
       STATE.raf=requestAnimationFrame(tick);
     }
+
     function step2(){
-      caption.textContent='Step 2 — Nerdio Right-sizes Desktops';
+      caption.textContent='Step 2 — Nerdio right-sizes desktops (autoscale savings).';
       colN.classList.add('ring-2','ring-emerald-400','shadow-emerald-500/20');
-      Array.from(neridioCloud.children).forEach((c,i)=> setTimeout(()=> c.style.background='linear-gradient(90deg, rgba(129,140,248,0.8), rgba(16,185,129,0.8))', i*40));
-      Array.from(neridioAvd.children).forEach((c,i)=> setTimeout(()=> c.style.background='linear-gradient(90deg, rgba(129,140,248,0.8), rgba(16,185,129,0.8))', i*40));
-      Array.from(neridioPolicy.children).forEach((d,i)=> setTimeout(()=> d.className='w-2 h-2 rounded-full bg-emerald-300', i*30));
+      Array.from(neridioCloud.children).forEach((c,i)=> setTimeout(()=> c.style.background='linear-gradient(90deg, rgba(129,140,248,0.8), rgba(16,185,129,0.8))', i*35));
+      Array.from(neridioAvd.children).forEach((c,i)=> setTimeout(()=> c.style.background='linear-gradient(90deg, rgba(129,140,248,0.8), rgba(16,185,129,0.8))', i*35));
+      Array.from(neridioPolicy.children).forEach((d,i)=> setTimeout(()=> d.className='w-2 h-2 rounded-full bg-emerald-300', i*25));
+
       if(STATE.reduced) return;
       const start=performance.now(), dur=900;
       const tick=(t)=>{ const p=Math.min(1,(t-start)/dur); setOpacity(energy.n,1); moveAlongPath(energy.n,paths.n2w,p); if(p<1) STATE.raf=requestAnimationFrame(tick); };
       STATE.raf=requestAnimationFrame(tick);
     }
+
     function step3(){
-      caption.textContent='Step 3 — Recast Delivers & Patches Apps';
+      caption.textContent='Step 3 — Recast delivers & patches apps across rings.';
       colR.classList.add('ring-2','ring-amber-400','shadow-amber-500/20');
-      // Flow through app phases
+
+      // Pills: queued -> provisioning -> patched -> updated
       PILLS.forEach((pill,i)=>{
-        STATE.timers.push(setTimeout(()=> setPillPhase(pill,'provisioning'), 90*i));
-        STATE.timers.push(setTimeout(()=> setPillPhase(pill,'patched'), 90*i + 600));
-        STATE.timers.push(setTimeout(()=> setPillPhase(pill,'updated'), 90*i + 1200));
+        STATE.timers.push(setTimeout(()=> colorPill(pill,'provisioning'), 80*i));
+        STATE.timers.push(setTimeout(()=> colorPill(pill,'patched'), 80*i + 520));
+        STATE.timers.push(setTimeout(()=> colorPill(pill,'updated'), 80*i + 1020));
       });
-      // Rings fill
+
+      // Ring bars fill progressively
       Array.from(recastRings.children).forEach((card,i)=>{
-        const bar=card.querySelector('div > div');
-        STATE.timers.push(setTimeout(()=> bar.style.width=['70%','85%','95%'][i], i*150));
+        const bar = card.querySelector('div > div');
+        STATE.timers.push(setTimeout(()=> bar.style.width = ['70%','85%','95%'][i], i*160));
       });
+
       if(STATE.reduced) return;
       const start=performance.now(), dur=900;
       const tick=(t)=>{ const p=Math.min(1,(t-start)/dur); setOpacity(energy.r,1); moveAlongPath(energy.r,paths.r2w,p); if(p<1) STATE.raf=requestAnimationFrame(tick); };
       STATE.raf=requestAnimationFrame(tick);
     }
+
     function step4(){
-      caption.textContent='Step 4 — Day One Workspace';
+      caption.textContent='Step 4 — Day One Workspace (provisioned, patched, governed).';
       outcome.style.boxShadow='0 0 0 4px rgba(52,211,153,.45), 0 0 52px rgba(52,211,153,.35)';
       outcome.style.transform='scale(1.04)';
     }
-    function step5(){ caption.textContent='Built on Microsoft — Azure-native, Intune-driven, Marketplace/MACC eligible.; }
+
+    function step5(){
+      caption.textContent='Loop or Reset to replay.';
+    }
 
     function startDemo(){
       if(STATE.playing) return;
-      STATE.playing=true; btnStart.querySelector('span').textContent='Playing…'; btnStart.setAttribute('aria-pressed','true');
+      STATE.playing = true;
+      btnStart.querySelector('span').textContent = 'Playing…';
+      btnStart.setAttribute('aria-pressed','true');
+
       clearTimers(); stopRAF(); resetDemo();
-      const t1=0,t2=1200,t3=2400,t4=3800,t5=5200,stopAt=7200;
+
+      const t1=0, t2=1200, t3=2400, t4=3800, t5=5200, stopAt=7200;
       STATE.timers.push(setTimeout(step1,t1));
       STATE.timers.push(setTimeout(step2,t2));
       STATE.timers.push(setTimeout(step3,t3));
       STATE.timers.push(setTimeout(step4,t4));
       STATE.timers.push(setTimeout(step5,t5));
-      STATE.timers.push(setTimeout(()=>{ STATE.playing=false; btnStart.querySelector('span').textContent='Start'; btnStart.setAttribute('aria-pressed','false'); }, stopAt));
+      STATE.timers.push(setTimeout(()=>{
+        STATE.playing=false;
+        btnStart.querySelector('span').textContent='Start';
+        btnStart.setAttribute('aria-pressed','false');
+      }, stopAt));
     }
 
+    // Events
     btnStart.addEventListener('click', startDemo);
     btnReset.addEventListener('click', resetDemo);
-    document.addEventListener('keydown', (e)=>{ const k=e.key.toLowerCase(); if(k==='s') startDemo(); if(k==='r') resetDemo(); });
+    document.addEventListener('keydown', (e)=> {
+      const k=e.key.toLowerCase();
+      if(k==='s') startDemo();
+      if(k==='r') resetDemo();
+    });
 
-    // Init
+    // Init icons & default state
     try { if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons(); else setTimeout(()=> window.lucide && window.lucide.createIcons && window.lucide.createIcons(), 60); } catch(_) {}
     resetDemo();
   </script>
